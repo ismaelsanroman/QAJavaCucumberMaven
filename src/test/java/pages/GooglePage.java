@@ -1,12 +1,12 @@
 package pages;
 
 public class GooglePage extends BasePage {
-    
-    public GooglePage (){
+
+    public GooglePage() {
         super(driver);
     }
 
-    public void NavigateToGoogle (){
+    public void NavigateToGoogle() {
         navigateTo("https://www.google.es");
     }
 
