@@ -2,20 +2,21 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-// import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 // import org.openqa.selenium.support.ui.WebDriverWait;
-import io.github.bonigarcia.wdm.WebDriverManager;
+// --import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
-    // System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+    
     protected static WebDriver driver;
     // private static WebDriverWait wait;
 
     static {
-        // ---- ChromeOptions chromeOptions = new ChromeOptions();
-        // ---- driver = new ChromeDriver(chromeOptions);
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "./src/test/resources/driver/chromedriver.exe");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        // --WebDriverManager.chromedriver().setup();
+        // --WebDriver driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver(chromeOptions);
         // wait = new WebDriverWait(driver, 10);
     }
 
@@ -26,5 +27,6 @@ public class BasePage {
 
     public static void navigateTo(String url){
         driver.get(url);
+        driver.manage().window().maximize();
     }
 }
