@@ -1,0 +1,73 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-06-30T07:46:16.916Z",
+        "line": 5,
+        "name": "Prueba X",
+        "description": "",
+        "id": "probar-la-funcionalidad-de-x;prueba-x",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2407460100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Navego hacia la web",
+            "match": {
+              "location": "PruebaSteps.navigateToWeb()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 504400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Buscamos en la web: Y",
+            "match": {
+              "location": "PruebaSteps.searchToWeb()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.Exception\r\n\tat steps.PruebaSteps.clickTo(PruebaSteps.java:23)\r\n\tat ✽.Clicamos sobre el boton(file:src/test/resources/features/prueba.feature:8)\r\n",
+              "duration": 1109300,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "Clicamos sobre el boton",
+            "match": {
+              "location": "PruebaSteps.clickTo()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 599300,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Obtengo de la web los resultados: Y",
+            "match": {
+              "location": "PruebaSteps.dataToWeb()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Probar la funcionalidad de X",
+    "description": "    Probamos la funcionalidad del proyecto X",
+    "id": "probar-la-funcionalidad-de-x",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/prueba.feature",
+    "tags": []
+  }
+]

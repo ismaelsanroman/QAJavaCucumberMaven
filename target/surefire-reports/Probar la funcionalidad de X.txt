@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: Probar la funcionalidad de X
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.428 s <<< FAILURE! - in Probar la funcionalidad de X
+Prueba X(Probar la funcionalidad de X)  Time elapsed: 2.428 s  <<< ERROR!
+java.lang.Exception
+
