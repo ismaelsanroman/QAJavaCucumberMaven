@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: Test product functionality: X
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.929 s - in Test product functionality: X
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 20.269 s <<< FAILURE! - in Test product functionality: X
+Alvatross Order-E2E(Test product functionality: X)  Time elapsed: 20.209 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=104.0.5112.102)
+Build info: version: '4.2.2', revision: '683ccb65d6'
+System info: host: 'ISMAEL-I9', ip: '192.168.1.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78cb0f133fcaeb59bca9897de7ade28f, get {url=https://order-management-frontend.lab36.int.satec.es}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Ismael\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53141}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53141/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 78cb0f133fcaeb59bca9897de7ade28f
+

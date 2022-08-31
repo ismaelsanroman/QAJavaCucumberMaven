@@ -1,3 +1,4 @@
 .metadata
 test-output
 log4j2/log4j2-test-automation.log
+/target/

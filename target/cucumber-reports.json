@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-08-31T10:33:47.889Z",
+        "start_timestamp": "2022-08-31T20:43:42.930Z",
         "line": 7,
         "name": "Title of your scenario",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 49991500,
+              "duration": 35216100,
               "status": "passed"
             },
             "line": 8,
@@ -34,7 +34,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-08-31T10:33:47.964Z",
+        "start_timestamp": "2022-08-31T20:43:42.993Z",
         "line": 14,
         "name": "Alvatross Order-E2E",
         "description": "",
@@ -44,8 +44,9 @@
         "steps": [
           {
             "result": {
-              "duration": 19113486000,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED\n  (Session info: headless chrome\u003d104.0.5112.102)\nBuild info: version: \u00274.2.2\u0027, revision: \u0027683ccb65d6\u0027\nSystem info: host: \u0027ISMAEL-I9\u0027, ip: \u0027192.168.1.128\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002718.0.1.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [78cb0f133fcaeb59bca9897de7ade28f, get {url\u003dhttps://order-management-frontend.lab36.int.satec.es}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\\Users\\Ismael\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53141}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53141/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 78cb0f133fcaeb59bca9897de7ade28f\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:351)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1046)\r\n\tat pages.FunctionsPage.navigateTo(FunctionsPage.java:32)\r\n\tat pages.ordere2e.OrderE2E.navigateOrder(OrderE2E.java:22)\r\n\tat code.OrderE2ESteps.navigateOrder(OrderE2ESteps.java:16)\r\n\tat ✽.We access a completed OM order with the Commercial order: \u003c\"25393\"\u003e(file:src/test/resources/features/Postpaid.feature:15)\r\n",
+              "duration": 20201793500,
+              "status": "failed"
             },
             "line": 15,
             "name": "We access a completed OM order with the Commercial order: \u003c\"25393\"\u003e",
@@ -62,8 +63,8 @@
           },
           {
             "result": {
-              "duration": 608834100,
-              "status": "passed"
+              "duration": 306100,
+              "status": "skipped"
             },
             "line": 16,
             "name": "The order has status \u003c\"Completed\"\u003e",
@@ -80,8 +81,8 @@
           },
           {
             "result": {
-              "duration": 2713370800,
-              "status": "passed"
+              "duration": 2615800,
+              "status": "skipped"
             },
             "line": 17,
             "name": "Item of type \u003citems\u003e have status \u003c\"completed\"\u003e in OM",
@@ -110,8 +111,8 @@
           },
           {
             "result": {
-              "duration": 8659706200,
-              "status": "passed"
+              "duration": 94200,
+              "status": "skipped"
             },
             "line": 21,
             "name": "The services have \u003c\"active\"\u003e status in IF",
@@ -128,8 +129,8 @@
           },
           {
             "result": {
-              "duration": 756131500,
-              "status": "passed"
+              "duration": 244600,
+              "status": "skipped"
             },
             "line": 22,
             "name": "End the test and close the test battery",
