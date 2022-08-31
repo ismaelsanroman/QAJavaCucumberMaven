@@ -1,0 +1,47 @@
+# Use Maven 3.5 and JDK8
+#maven:3.5-jdk-8
+image: markhobson/maven-chrome:jdk-11
+ 
+variables:
+  # This will supress any download for dependencies and plugins or upload messages which would clutter the console log.
+  # `showDateTime` will show the passed time in milliseconds. You need to specify `--batch-mode` to make this work.
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+  # As of Maven 3.3.0 instead of this you may define these options in `.mvn/maven.config` so the same config is used
+  # when running from the command line.
+  # `installAtEnd` and `deployAtEnd`are only effective with recent version of the corresponding plugins.
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
+ 
+ 
+# Cache downloaded dependencies and plugins between builds.
+# To keep cache across branches add 'key: "$CI_JOB_REF_NAME"'
+cache:
+  paths:
+    - .m2/repository
+ 
+.test_conectividad:
+  stage: .pre
+  image:  wbitt/network-multitool
+  script:
+    - traceroute order-management-frontend.lab36.int.satec.es
+    - telnet 10.9.9.3 443 
+    - telnet order-management-frontend.lab36.int.satec.es 443
+  allow_failure: true  
+  tags:
+   - alvatros-xray  
+   
+     
+maven_build:
+  image: markhobson/maven-chrome:jdk-11
+  before_script:
+    - curl https://order-management-frontend.lab36.int.satec.es/product-orders || echo "yes" 
+    - curl -k https://order-management-frontend.lab36.int.satec.es/product-orders || echo "yes" 
+  script:
+    - |
+        echo "building my Alvatross E2E Test..."
+        mvn test -Dcucumber.options="--tags ${tag}"
+        export token=$(curl -H "Content-Type: application/json" -X POST --data "{ \"client_id\": \"$client_id\",\"client_secret\": \"$client_secret\" }" https://$xray_endpoint/api/v2/authenticate| tr -d '"') 
+        echo $token
+        curl -H "Content-Type: text/xml" -H "Authorization: Bearer $token" --data @target/surefire-reports/TEST-${feature}.xml "https://$xray_endpoint/api/v2/import/execution/junit?projectKey=TXRAY&testPlanKey=${TEST}"
+        echo "done"
+  tags:
+   - alvatros-xray    

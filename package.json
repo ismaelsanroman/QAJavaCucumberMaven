@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^1.21.4"
+  },
+  "scripts": {
+    "report": "node index.js"
+  }
+}

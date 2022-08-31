@@ -1,0 +1,168 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-08-31T10:33:47.889Z",
+        "line": 7,
+        "name": "Title of your scenario",
+        "description": "",
+        "id": "test-product-functionality:-x;title-of-your-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 49991500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "prepare the environment",
+            "match": {
+              "location": "Steps.prepare_the_environment()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-08-31T10:33:47.964Z",
+        "line": 14,
+        "name": "Alvatross Order-E2E",
+        "description": "",
+        "id": "test-product-functionality:-x;alvatross-order-e2e",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19113486000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "We access a completed OM order with the Commercial order: \u003c\"25393\"\u003e",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"25393\"",
+                  "offset": 59
+                }
+              ],
+              "location": "OrderE2ESteps.navigateOrder(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 608834100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The order has status \u003c\"Completed\"\u003e",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Completed\"",
+                  "offset": 22
+                }
+              ],
+              "location": "OrderE2ESteps.statusService(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2713370800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Item of type \u003citems\u003e have status \u003c\"completed\"\u003e in OM",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"completed\"",
+                  "offset": 34
+                }
+              ],
+              "location": "OrderE2ESteps.itemsCompleted(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "TelenorIPTVRFS"
+                ]
+              },
+              {
+                "cells": [
+                  "TelenorIPTVCFS"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8659706200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The services have \u003c\"active\"\u003e status in IF",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"active\"",
+                  "offset": 19
+                }
+              ],
+              "location": "OrderE2ESteps.servicesSI(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 756131500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "End the test and close the test battery",
+            "match": {
+              "location": "OrderE2ESteps.endTest()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@OrderE2E"
+          }
+        ]
+      }
+    ],
+    "name": "Test product functionality: X",
+    "description": "\tWe test the functionality of the project for the product X",
+    "id": "test-product-functionality:-x",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Postpaid.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

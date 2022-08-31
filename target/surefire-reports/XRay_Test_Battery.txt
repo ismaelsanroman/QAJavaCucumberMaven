@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: XRay_Test_Battery
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.237 s <<< FAILURE! - in XRay_Test_Battery
+Tests number three(XRay_Test_Battery)  Time elapsed: 0.014 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Error in the test number 3 contemplated expected:<5> but was:<3>
+
+Tests number five(XRay_Test_Battery)  Time elapsed: 0.002 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Error in the test number 5 contemplated expected:<7> but was:<5>
+
+Tests number seven(XRay_Test_Battery)  Time elapsed: 0.002 s  <<< FAILURE!
+junit.framework.AssertionFailedError: Error in the test number 7 contemplated expected:<9> but was:<7>
+
